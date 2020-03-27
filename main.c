@@ -10,7 +10,7 @@
 #include <unistd.h>
 #include "my.h"
 
-char **copy(char *envp[], int add, int *pos)
+/*char **copy(char *envp[], int add, int *pos)
 {
     int i = 0;
     int len = 0;
@@ -74,11 +74,14 @@ char *line_cleaner(char *tmp)
         }
     }
     return tmp;
-}
+}*/
 
 int main(int argc, char *argv[], char *envp[])
 {
-    char *line = NULL;
+    if (envp[0] == NULL)
+        return 84;
+
+/*    char *line = NULL;
     size_t size;
     char **arg = NULL;
     char **splitted = (char **)malloc(3 * sizeof(char *));
@@ -93,5 +96,5 @@ int main(int argc, char *argv[], char *envp[])
         arg = my_str_to_word_array(line);
         splitted = spliter(line, splitted);
         choice(&envp, splitted, arg);
-    }
+    }*/
 }

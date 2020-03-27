@@ -12,6 +12,7 @@ void my_putchar(char c);
 int myputstr(char *str, int opt);
 int my_puterror(char *str, int opt);
 int my_put_nbr(int nb);
+
 int cd_checker(char *pathname);
 int choose(char *line);
 int lenght(char *str);

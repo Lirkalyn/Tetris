@@ -8,16 +8,11 @@
 
 SRC	=	main.c \
 		display.c \
-		builtin.c \
-		builtin2.c \
-		splitter.c \
-		my_str_to_word_array.c \
-		child.c \
-		child2.c
+		splitter.c
 
 OBJ	=	$(SRC:.c=.o)
 
-NAME	=	mysh
+NAME	=	tetris
 
 $(NAME):	$(OBJ)
 		gcc -g -o $(NAME) $(SRC)
