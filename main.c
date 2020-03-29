@@ -1,14 +1,11 @@
 /*
-** EPITECH PROJECT, 2020
-** mathstick
+** EPITECH PROJECT, 2019
+** PSU_tetris_2019
 ** File description:
-** stick-desu
+** main.c
 */
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h>
-#include "my.h"
+#include "tetris.h"
 
 /*char **copy(char *envp[], int add, int *pos)
 {
@@ -78,23 +75,17 @@ char *line_cleaner(char *tmp)
 
 int main(int argc, char *argv[], char *envp[])
 {
+    int c;
+    m_key t_key;
     if (envp[0] == NULL)
         return 84;
 
-/*    char *line = NULL;
-    size_t size;
-    char **arg = NULL;
-    char **splitted = (char **)malloc(3 * sizeof(char *));
-
-    while (1) {
-        myputstr("$>", 1);
-        if ((getline(&line, &size, stdin) == -1) || splitted == NULL)
-            return 84;
-        line = line_cleaner(line);
-        if (line == NULL)
-            return 84;
-        arg = my_str_to_word_array(line);
-        splitted = spliter(line, splitted);
-        choice(&envp, splitted, arg);
-    }*/
+    if (argv[1][0] == '-' && argv[1][1] == 'd') {
+            debug_m (t_key);
+            return (0);
+        }
+    if (argv[1][0] == '-') {
+        h_err (argc, argv);
+        return (0);
+    }
 }
